@@ -12,7 +12,7 @@ OpenBIC implements IPMI and PLDM protocols for BMC communication.
 ## IPMI Overview
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'actorLineColor': '#333333', 'signalColor': '#333333'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'actorLineColor': '#000000', 'signalColor': '#000000'}}}%%
 sequenceDiagram
     participant Host
     participant BIC as OpenBIC
