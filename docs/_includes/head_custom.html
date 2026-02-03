@@ -35,19 +35,17 @@
   .mermaid .flowchart-link,
   .mermaid .messageLine0,
   .mermaid .messageLine1,
-  .mermaid .relation,
-  .mermaid .actor-line {
+  .mermaid .relation {
     stroke: #4a5568 !important;
   }
 
   /* Sequence diagram lifelines - ensure visibility */
-  .mermaid .sequenceDiagram line,
-  .mermaid line.actor-line,
-  .mermaid .lifeline,
-  .mermaid line[class*="actor"] {
+  .mermaid .actor-man line,
+  .mermaid g line.actor-line,
+  .mermaid line.loopLine,
+  .mermaid svg line {
     stroke: #4a5568 !important;
-    stroke-width: 1.5px !important;
-    stroke-dasharray: 5, 3 !important;
+    stroke-width: 2px !important;
   }
 
   /* Sequence diagram message lines */
@@ -108,3 +106,46 @@
     stroke-width: 2px !important;
   }
 </style>
+
+<!-- Mermaid configuration for sequence diagrams -->
+<script type="module">
+  const mermaidConfig = {
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      background: '#d5d0c8',
+      primaryColor: '#c5c0b8',
+      primaryTextColor: '#2c3e50',
+      primaryBorderColor: '#8a8578',
+      lineColor: '#4a5568',
+      textColor: '#2c3e50',
+      // Sequence diagram specific
+      actorBkg: '#c5c0b8',
+      actorBorder: '#8a8578',
+      actorTextColor: '#2c3e50',
+      actorLineColor: '#4a5568',
+      signalColor: '#4a5568',
+      signalTextColor: '#2c3e50',
+      noteBkgColor: '#ddd8c8',
+      noteBorderColor: '#a89878',
+      noteTextColor: '#2c3e50',
+      sequenceNumberColor: '#2c3e50'
+    },
+    sequence: {
+      actorMargin: 50,
+      showSequenceNumbers: false,
+      useMaxWidth: true
+    }
+  };
+
+  // Wait for mermaid to be available and re-initialize
+  if (typeof mermaid !== 'undefined') {
+    mermaid.initialize(mermaidConfig);
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof mermaid !== 'undefined') {
+        mermaid.initialize(mermaidConfig);
+      }
+    });
+  }
+</script>
