@@ -3,7 +3,7 @@ title: Zephyr RTOS Programming Guide
 description: >-
   A comprehensive guide for Zephyr RTOS programming - from beginner to professional.
   Learn kernel fundamentals, device drivers, networking, Bluetooth, and real-world case studies.
-baseurl: "/zephyr-guide-tutorial"
+baseurl: "/zephyr-guide-tutorial-openspec"
 url: ""
 
 # Theme
@@ -28,7 +28,7 @@ search:
 # Aux links (top right)
 aux_links:
   "Zephyr Guide GitHub":
-    - "https://github.com/MichaelTien8901/zephyr-guide-tutorial"
+    - "https://github.com/MichaelTien8901/zephyr-guide-tutorial-openspec"
 aux_links_new_tab: true
 
 # Footer

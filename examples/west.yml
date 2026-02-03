@@ -1,0 +1,38 @@
+# West Manifest for Zephyr Guide Tutorial Examples
+#
+# This manifest pins specific versions of Zephyr and modules
+# to ensure reproducible builds.
+#
+# Usage:
+#   west init -l examples/
+#   west update
+
+manifest:
+  version: "1.0"
+
+  defaults:
+    remote: zephyrproject
+
+  remotes:
+    - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject
+      revision: v3.6.0
+      import:
+        # Only import modules needed for examples
+        name-allowlist:
+          - cmsis
+          - hal_nordic
+          - hal_stm32
+          - mbedtls
+          - mcuboot
+          - net-tools
+          - picolibc
+          - tinycrypt
+
+  self:
+    path: examples
+    west-commands: scripts/west-commands.yml

@@ -48,7 +48,7 @@ Welcome to the comprehensive Zephyr RTOS programming guide. This tutorial takes 
 
 ## Sample Code
 
-All examples in this guide are tested and available in the [examples/](https://github.com/MichaelTien8901/zephyr-guide-tutorial/tree/main/examples) directory. Each example includes:
+All examples in this guide are tested and available in the [examples/](https://github.com/MichaelTien8901/zephyr-guide-tutorial-openspec/tree/main/examples) directory. Each example includes:
 
 - Complete, buildable Zephyr application
 - Detailed comments explaining the code
@@ -68,7 +68,7 @@ See [Docker Setup]({% link part1/05-docker-setup.md %}) for details.
 
 ## Contributing
 
-Found an error? Want to add content? [Open an issue](https://github.com/MichaelTien8901/zephyr-guide-tutorial/issues) on GitHub.
+Found an error? Want to add content? [Open an issue](https://github.com/MichaelTien8901/zephyr-guide-tutorial-openspec/issues) on GitHub.
 
 ---
 

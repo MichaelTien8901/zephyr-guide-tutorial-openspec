@@ -45,60 +45,61 @@
 ## 5. Part 4 - Synchronization and IPC
 
 - [x] 5.1 Create part4/index.md with synchronization section overview
-- [ ] 5.2 Create part4/01-mutexes.md - Mutex usage, priority inheritance, vs spinlock
-- [ ] 5.3 Create part4/02-semaphores.md - Counting/binary semaphores with producer-consumer diagram
-- [ ] 5.4 Create part4/03-condition-variables.md - Condvar usage and predicate pattern
-- [ ] 5.5 Create part4/04-spinlocks.md - ISR-safe locking, atomic operations
-- [ ] 5.6 Create part4/05-message-queues.md - Message queue usage with flow diagram
-- [ ] 5.7 Create part4/06-fifos-lifos.md - FIFO/LIFO for variable-size data passing
-- [ ] 5.8 Create part4/07-pipes-mailboxes.md - Byte streams and synchronous messaging
-- [ ] 5.9 Create part4/08-events-polling.md - Events, k_poll, multiplexing diagram
-- [ ] 5.10 Create part4/09-ipc-selection.md - IPC decision flowchart and patterns
+- [x] 5.2 Create part4/01-mutexes.md - Mutex usage, priority inheritance, vs spinlock
+- [x] 5.3 Create part4/02-semaphores.md - Counting/binary semaphores with producer-consumer diagram
+- [x] 5.4 Create part4/03-condition-variables.md - Condvar usage and predicate pattern
+- [x] 5.5 Create part4/04-spinlocks.md - ISR-safe locking, atomic operations
+- [x] 5.6 Create part4/05-message-queues.md - Message queue usage with flow diagram
+- [x] 5.7 Create part4/06-fifos-lifos.md - FIFO/LIFO for variable-size data passing
+- [x] 5.8 Create part4/07-pipes-mailboxes.md - Byte streams and synchronous messaging
+- [x] 5.9 Create part4/08-events-polling.md - Events, k_poll, multiplexing diagram
+- [x] 5.10 Create part4/09-ipc-selection.md - IPC decision flowchart and patterns
+- [x] 5.11 Create part4/10-zbus.md - Zbus publish-subscribe messaging (added by request)
 
 ## 6. Part 5 - Device Drivers
 
 - [x] 6.1 Create part5/index.md with device driver section overview
-- [ ] 6.2 Create part5/01-driver-model.md - Driver architecture diagram, device API pattern
-- [ ] 6.3 Create part5/02-device-tree-bindings.md - Compatible strings, bindings YAML, macros
-- [ ] 6.4 Create part5/03-gpio.md - GPIO configuration, read/write, interrupts with LED example
-- [ ] 6.5 Create part5/04-i2c.md - I2C configuration, transfers, sensor example
-- [ ] 6.6 Create part5/05-spi.md - SPI configuration and transfer patterns
-- [ ] 6.7 Create part5/06-uart.md - UART polling, interrupt, async API modes
-- [ ] 6.8 Create part5/07-custom-drivers.md - Writing custom drivers with complete example
+- [x] 6.2 Create part5/01-driver-model.md - Driver architecture diagram, device API pattern
+- [x] 6.3 Create part5/02-device-tree-bindings.md - Compatible strings, bindings YAML, macros
+- [x] 6.4 Create part5/03-gpio.md - GPIO configuration, read/write, interrupts with LED example
+- [x] 6.5 Create part5/04-i2c.md - I2C configuration, transfers, sensor example
+- [x] 6.6 Create part5/05-spi.md - SPI configuration and transfer patterns
+- [x] 6.7 Create part5/06-uart.md - UART polling, interrupt, async API modes
+- [x] 6.8 Create part5/07-custom-drivers.md - Writing custom drivers with complete example
 
 ## 7. Part 6 - Advanced Topics
 
 - [x] 7.1 Create part6/index.md with advanced topics section overview
-- [ ] 7.2 Create part6/01-networking-overview.md - Network stack architecture diagram
-- [ ] 7.3 Create part6/02-sockets.md - BSD sockets API, TCP/UDP client/server examples
-- [ ] 7.4 Create part6/03-mqtt.md - MQTT client connection, pub/sub with example
-- [ ] 7.5 Create part6/04-coap.md - CoAP basics, server resources, observe pattern
-- [ ] 7.6 Create part6/05-http.md - HTTP client/server basics
-- [ ] 7.7 Create part6/06-tls.md - TLS/DTLS configuration, secure socket example
-- [ ] 7.8 Create part6/07-ble-overview.md - Bluetooth stack architecture diagram
-- [ ] 7.9 Create part6/08-ble-advertising.md - Advertising, scan response, modes
-- [ ] 7.10 Create part6/09-ble-scanning.md - Scanning, filtering, central role
-- [ ] 7.11 Create part6/10-ble-gatt-server.md - GATT service definition with custom example
-- [ ] 7.12 Create part6/11-ble-gatt-client.md - Service discovery, read/write, notifications
-- [ ] 7.13 Create part6/12-ble-mesh.md - Bluetooth Mesh introduction and basic example
-- [ ] 7.14 Create part6/13-power-management.md - PM architecture, states, state diagram
-- [ ] 7.15 Create part6/14-device-pm.md - Per-device PM, tickless kernel, policy
-- [ ] 7.16 Create part6/15-debugging.md - Logging, shell, GDB, fault analysis
-- [ ] 7.17 Create part6/16-testing.md - Twister, Ztest, test organization
+- [x] 7.2 Create part6/01-networking-overview.md - Network stack architecture diagram
+- [x] 7.3 Create part6/02-sockets.md - BSD sockets API, TCP/UDP client/server examples
+- [x] 7.4 Create part6/03-mqtt.md - MQTT client connection, pub/sub with example
+- [x] 7.5 Create part6/04-coap.md - CoAP basics, server resources, observe pattern
+- [x] 7.6 Create part6/05-http.md - HTTP client/server basics
+- [x] 7.7 Create part6/06-tls.md - TLS/DTLS configuration, secure socket example
+- [x] 7.8 Create part6/07-ble-overview.md - Bluetooth stack architecture diagram
+- [x] 7.9 Create part6/08-ble-advertising.md - Advertising, scan response, modes
+- [x] 7.10 Create part6/09-ble-scanning.md - Scanning, filtering, central role
+- [x] 7.11 Create part6/10-ble-gatt-server.md - GATT service definition with custom example
+- [x] 7.12 Create part6/11-ble-gatt-client.md - Service discovery, read/write, notifications
+- [x] 7.13 Create part6/12-ble-mesh.md - Bluetooth Mesh introduction and basic example
+- [x] 7.14 Create part6/13-power-management.md - PM architecture, states, state diagram
+- [x] 7.15 Create part6/14-device-pm.md - Per-device PM, tickless kernel, policy
+- [x] 7.16 Create part6/15-debugging.md - Logging, shell, GDB, fault analysis
+- [x] 7.17 Create part6/16-testing.md - Twister, Ztest, test organization
 
 ## 8. Part 7 - Professional Case Studies
 
 - [x] 8.1 Create part7/index.md with case studies section overview
-- [ ] 8.2 Create part7/01-openbic-overview.md - OpenBIC introduction, architecture diagram
-- [ ] 8.3 Create part7/02-openbic-architecture.md - Module organization, platform abstraction
-- [ ] 8.4 Create part7/03-openbic-protocols.md - IPMI/PLDM implementation analysis
-- [ ] 8.5 Create part7/04-openbic-sensors.md - Sensor framework, monitoring diagram
-- [ ] 8.6 Create part7/05-openbic-lessons.md - Design patterns and lessons learned
-- [ ] 8.7 Create part7/06-aspeed-rot-overview.md - ASPEED RoT introduction, security architecture
-- [ ] 8.8 Create part7/07-aspeed-rot-secure-boot.md - Secure boot flow diagram, verification
-- [ ] 8.9 Create part7/08-aspeed-rot-attestation.md - Attestation, DICE/SPDM, sequence diagram
-- [ ] 8.10 Create part7/09-aspeed-rot-pfr.md - Platform Firmware Resilience, recovery patterns
-- [ ] 8.11 Create part7/10-aspeed-rot-lessons.md - Security patterns and lessons learned
+- [x] 8.2 Create part7/01-openbic-overview.md - OpenBIC introduction, architecture diagram
+- [x] 8.3 Create part7/02-openbic-architecture.md - Module organization, platform abstraction
+- [x] 8.4 Create part7/03-openbic-protocols.md - IPMI/PLDM implementation analysis
+- [x] 8.5 Create part7/04-openbic-sensors.md - Sensor framework, monitoring diagram
+- [x] 8.6 Create part7/05-openbic-lessons.md - Design patterns and lessons learned
+- [x] 8.7 Create part7/06-aspeed-rot-overview.md - ASPEED RoT introduction, security architecture
+- [x] 8.8 Create part7/07-aspeed-rot-secure-boot.md - Secure boot flow diagram, verification
+- [x] 8.9 Create part7/08-aspeed-rot-attestation.md - Attestation, DICE/SPDM, sequence diagram
+- [x] 8.10 Create part7/09-aspeed-rot-pfr.md - Platform Firmware Resilience, recovery patterns
+- [x] 8.11 Create part7/10-aspeed-rot-lessons.md - Security patterns and lessons learned
 
 ## 9. Appendices
 
@@ -109,23 +110,24 @@
 
 ## 10. Code Examples
 
-- [ ] 10.1 Create examples/README.md with examples overview and structure
-- [ ] 10.2 Create examples/part1/hello-world/ - CMakeLists.txt, prj.conf, src/main.c, README.md
-- [ ] 10.3 Create examples/part1/blinky/ - LED blink example with GPIO
-- [ ] 10.4 Create examples/part3/threads/ - Thread creation and management example
-- [ ] 10.5 Create examples/part3/timers/ - k_timer usage example
-- [ ] 10.6 Create examples/part3/workqueue/ - k_work patterns example
-- [ ] 10.7 Create examples/part4/mutex/ - Protected shared resource example
-- [ ] 10.8 Create examples/part4/semaphore/ - Producer-consumer example
-- [ ] 10.9 Create examples/part4/msgq/ - Message queue communication example
-- [ ] 10.10 Create examples/part5/gpio/ - GPIO input/output/interrupt example
-- [ ] 10.11 Create examples/part5/i2c-sensor/ - I2C device communication example
-- [ ] 10.12 Create examples/part5/uart/ - Serial communication example
-- [ ] 10.13 Create examples/part6/tcp-client/ - TCP socket client example
-- [ ] 10.14 Create examples/part6/mqtt/ - MQTT pub/sub example
-- [ ] 10.15 Create examples/part6/ble-peripheral/ - BLE GATT server example
-- [ ] 10.16 Create examples/Dockerfile for Zephyr SDK build environment
-- [ ] 10.17 Create examples/rust-toolchain.toml equivalent (west.yml or manifest) for version pinning
+- [x] 10.1 Create examples/README.md with examples overview and structure
+- [x] 10.2 Create examples/part1/hello-world/ - CMakeLists.txt, prj.conf, src/main.c, README.md
+- [x] 10.3 Create examples/part1/blinky/ - LED blink example with GPIO
+- [x] 10.4 Create examples/part3/threads/ - Thread creation and management example
+- [x] 10.5 Create examples/part3/timers/ - k_timer usage example
+- [x] 10.6 Create examples/part3/workqueue/ - k_work patterns example
+- [x] 10.7 Create examples/part4/mutex/ - Protected shared resource example
+- [x] 10.8 Create examples/part4/semaphore/ - Producer-consumer example
+- [x] 10.9 Create examples/part4/msgq/ - Message queue communication example
+- [x] 10.10 Create examples/part4/zbus/ - Zbus publish-subscribe example
+- [x] 10.11 Create examples/part5/gpio/ - GPIO input/output/interrupt example
+- [x] 10.12 Create examples/part5/i2c-sensor/ - I2C device communication example
+- [x] 10.13 Create examples/part5/uart/ - Serial communication example
+- [x] 10.14 Create examples/part6/tcp-client/ - TCP socket client example
+- [x] 10.15 Create examples/part6/mqtt/ - MQTT pub/sub example
+- [x] 10.16 Create examples/part6/ble-peripheral/ - BLE GATT server example
+- [x] 10.17 Create examples/Dockerfile for Zephyr SDK build environment
+- [x] 10.18 Create examples/west.yml manifest for version pinning
 
 ## 11. Final Integration
 

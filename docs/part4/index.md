@@ -19,6 +19,7 @@ This section covers kernel objects for thread synchronization and data passing i
 - Message queues, FIFOs, LIFOs
 - Pipes and mailboxes
 - Events and polling
+- Zbus publish-subscribe messaging
 
 ## Chapters
 
@@ -33,6 +34,7 @@ This section covers kernel objects for thread synchronization and data passing i
 | [Pipes and Mailboxes]({% link part4/07-pipes-mailboxes.md %}) | Byte streams and sync messaging |
 | [Events and Polling]({% link part4/08-events-polling.md %}) | Multi-event waiting |
 | [IPC Selection Guide]({% link part4/09-ipc-selection.md %}) | Decision flowcharts |
+| [Zbus]({% link part4/10-zbus.md %}) | Publish-subscribe message bus |
 
 ## When to Use What
 
