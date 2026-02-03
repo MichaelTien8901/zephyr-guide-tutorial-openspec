@@ -39,20 +39,10 @@
     stroke: #4a5568 !important;
   }
 
-  /* Sequence diagram lifelines - force dark color on light background */
-  .mermaid svg line[class="200"],
-  .mermaid svg line[stroke="#FFF"],
-  .mermaid svg line[stroke="#fff"],
-  .mermaid svg line[stroke="white"],
-  .mermaid svg line[stroke="#FFFFFF"],
-  .mermaid svg line[stroke="#ffffff"],
-  .mermaid .actor-man line,
-  .mermaid g line.actor-line,
-  .mermaid line.loopLine,
-  .mermaid svg g line,
+  /* Sequence diagram lifelines - force dark color */
+  .mermaid[data-processed="true"] line,
   .mermaid svg line {
-    stroke: #4a5568 !important;
-    stroke-width: 1.5px !important;
+    stroke: #333333 !important;
   }
 
   /* Sequence diagram message lines */
