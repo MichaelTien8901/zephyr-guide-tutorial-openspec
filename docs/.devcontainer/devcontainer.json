@@ -1,0 +1,17 @@
+{
+  "name": "Zephyr Guide Development",
+  "dockerFile": "../Dockerfile",
+  "context": "..",
+  "forwardPorts": [4000, 35729],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "DavidAnson.vscode-markdownlint"
+      ]
+    }
+  },
+  "postCreateCommand": "bundle install",
+  "remoteUser": "root"
+}
