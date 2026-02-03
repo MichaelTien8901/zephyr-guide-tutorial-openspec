@@ -39,9 +39,15 @@
     stroke: #4a5568 !important;
   }
 
-  /* Sequence diagram lifelines - force black color */
-  .mermaid[data-processed="true"] line,
-  .mermaid svg line {
+  /* Sequence diagram lifelines - force black color with max specificity */
+  .mermaid line[stroke="#999"],
+  .mermaid line[stroke="#999999"],
+  .mermaid svg line[stroke="#999"],
+  .mermaid svg line[stroke="#999999"],
+  pre.mermaid line[stroke="#999"],
+  div.mermaid line[stroke="#999"],
+  .mermaid[data-processed="true"] line[stroke="#999"],
+  .mermaid svg g line {
     stroke: #000000 !important;
   }
 
@@ -153,9 +159,11 @@
       if (stroke && (stroke.toLowerCase() === '#fff' ||
                      stroke.toLowerCase() === '#ffffff' ||
                      stroke.toLowerCase() === 'white' ||
-                     stroke.toLowerCase() === 'rgb(255, 255, 255)')) {
-        line.setAttribute('stroke', '#4a5568');
-        line.setAttribute('stroke-width', '1.5');
+                     stroke.toLowerCase() === '#999' ||
+                     stroke.toLowerCase() === '#999999' ||
+                     stroke.toLowerCase() === 'rgb(255, 255, 255)' ||
+                     stroke.toLowerCase() === 'rgb(153, 153, 153)')) {
+        line.setAttribute('stroke', '#000000');
       }
     });
   }
