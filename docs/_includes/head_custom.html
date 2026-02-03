@@ -41,7 +41,7 @@
   /* Sequence diagram actor lifelines - force visible */
   line[id^="actor"] {
     stroke: #000000 !important;
-    stroke-width: 2px !important;
+    stroke-width: 0.5px !important;
   }
 
   /* Sequence diagram message lines */
@@ -110,7 +110,7 @@
     var lines = document.querySelectorAll('line[id^="actor"]');
     for (var i = 0; i < lines.length; i++) {
       lines[i].setAttribute('stroke', '#000000');
-      lines[i].setAttribute('stroke-width', '2px');
+      lines[i].setAttribute('stroke-width', '0.5px');
     }
   }
 
