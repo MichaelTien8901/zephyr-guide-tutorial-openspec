@@ -39,13 +39,20 @@
     stroke: #4a5568 !important;
   }
 
-  /* Sequence diagram lifelines - ensure visibility */
+  /* Sequence diagram lifelines - force dark color on light background */
+  .mermaid svg line[class="200"],
+  .mermaid svg line[stroke="#FFF"],
+  .mermaid svg line[stroke="#fff"],
+  .mermaid svg line[stroke="white"],
+  .mermaid svg line[stroke="#FFFFFF"],
+  .mermaid svg line[stroke="#ffffff"],
   .mermaid .actor-man line,
   .mermaid g line.actor-line,
   .mermaid line.loopLine,
+  .mermaid svg g line,
   .mermaid svg line {
     stroke: #4a5568 !important;
-    stroke-width: 2px !important;
+    stroke-width: 1.5px !important;
   }
 
   /* Sequence diagram message lines */
@@ -148,4 +155,40 @@
       }
     });
   }
+
+  // Fix lifeline colors after mermaid renders
+  function fixLifelineColors() {
+    document.querySelectorAll('.mermaid svg line').forEach(function(line) {
+      const stroke = line.getAttribute('stroke');
+      if (stroke && (stroke.toLowerCase() === '#fff' ||
+                     stroke.toLowerCase() === '#ffffff' ||
+                     stroke.toLowerCase() === 'white' ||
+                     stroke.toLowerCase() === 'rgb(255, 255, 255)')) {
+        line.setAttribute('stroke', '#4a5568');
+        line.setAttribute('stroke-width', '1.5');
+      }
+    });
+  }
+
+  // Run after page load and mermaid rendering
+  window.addEventListener('load', function() {
+    setTimeout(fixLifelineColors, 500);
+    setTimeout(fixLifelineColors, 1000);
+    setTimeout(fixLifelineColors, 2000);
+  });
+
+  // Also use MutationObserver to catch dynamically rendered diagrams
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes.length) {
+        setTimeout(fixLifelineColors, 100);
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.mermaid').forEach(function(el) {
+      observer.observe(el, { childList: true, subtree: true });
+    });
+  });
 </script>
