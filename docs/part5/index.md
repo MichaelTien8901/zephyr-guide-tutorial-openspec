@@ -22,7 +22,7 @@ This section covers Zephyr's device driver model and common peripheral interface
 | Chapter | Description |
 |---------|-------------|
 | [Driver Model]({% link part5/01-driver-model.md %}) | Device architecture and APIs |
-| [Device Tree Bindings]({% link part5/02-device-tree-bindings.md %}) | Connecting DTS to drivers |
+| [Device Tree Bindings]({% link part5/02-devicetree-bindings.md %}) | Connecting DTS to drivers |
 | [GPIO]({% link part5/03-gpio.md %}) | Digital I/O and interrupts |
 | [I2C]({% link part5/04-i2c.md %}) | I2C bus communication |
 | [SPI]({% link part5/05-spi.md %}) | SPI bus communication |
