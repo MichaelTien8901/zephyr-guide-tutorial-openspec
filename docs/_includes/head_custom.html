@@ -39,15 +39,11 @@
     stroke: #4a5568 !important;
   }
 
-  /* Sequence diagram lifelines - force black color with max specificity */
-  .mermaid line[stroke="#999"],
-  .mermaid line[stroke="#999999"],
-  .mermaid svg line[stroke="#999"],
-  .mermaid svg line[stroke="#999999"],
-  pre.mermaid line[stroke="#999"],
-  div.mermaid line[stroke="#999"],
-  .mermaid[data-processed="true"] line[stroke="#999"],
-  .mermaid svg g line {
+  /* Sequence diagram lifelines - target actor lines by ID pattern */
+  .mermaid line[id^="actor"],
+  .mermaid svg line[id^="actor"],
+  .mermaid line[class="200"],
+  .mermaid svg line[class="200"] {
     stroke: #000000 !important;
   }
 
@@ -154,10 +150,10 @@
 
   // Fix lifeline colors after mermaid renders
   function fixLifelineColors() {
-    document.querySelectorAll('.mermaid svg line').forEach(function(line) {
-      // Force black stroke on ALL lines in sequence diagrams
+    // Target actor lifelines specifically
+    document.querySelectorAll('.mermaid svg line[id^="actor"], .mermaid svg line[class="200"]').forEach(function(line) {
       line.setAttribute('stroke', '#000000');
-      line.style.stroke = '#000000';
+      line.style.setProperty('stroke', '#000000', 'important');
     });
   }
 
