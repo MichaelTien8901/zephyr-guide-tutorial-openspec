@@ -155,38 +155,31 @@
   // Fix lifeline colors after mermaid renders
   function fixLifelineColors() {
     document.querySelectorAll('.mermaid svg line').forEach(function(line) {
-      const stroke = line.getAttribute('stroke');
-      if (stroke && (stroke.toLowerCase() === '#fff' ||
-                     stroke.toLowerCase() === '#ffffff' ||
-                     stroke.toLowerCase() === 'white' ||
-                     stroke.toLowerCase() === '#999' ||
-                     stroke.toLowerCase() === '#999999' ||
-                     stroke.toLowerCase() === 'rgb(255, 255, 255)' ||
-                     stroke.toLowerCase() === 'rgb(153, 153, 153)')) {
-        line.setAttribute('stroke', '#000000');
-      }
+      // Force black stroke on ALL lines in sequence diagrams
+      line.setAttribute('stroke', '#000000');
+      line.style.stroke = '#000000';
     });
   }
 
-  // Run after page load and mermaid rendering
+  // Run multiple times to catch async rendering
   window.addEventListener('load', function() {
+    setTimeout(fixLifelineColors, 100);
     setTimeout(fixLifelineColors, 500);
     setTimeout(fixLifelineColors, 1000);
     setTimeout(fixLifelineColors, 2000);
+    setTimeout(fixLifelineColors, 3000);
   });
 
   // Also use MutationObserver to catch dynamically rendered diagrams
   const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if (mutation.addedNodes.length) {
-        setTimeout(fixLifelineColors, 100);
-      }
-    });
+    setTimeout(fixLifelineColors, 50);
+    setTimeout(fixLifelineColors, 200);
   });
 
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.mermaid').forEach(function(el) {
       observer.observe(el, { childList: true, subtree: true });
     });
+    setTimeout(fixLifelineColors, 100);
   });
 </script>
