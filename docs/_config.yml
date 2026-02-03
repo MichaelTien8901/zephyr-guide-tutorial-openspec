@@ -10,9 +10,15 @@ url: ""
 theme: just-the-docs
 color_scheme: dark
 
-# Mermaid diagrams
+# Mermaid diagrams - use neutral theme to avoid white lines on light background
 mermaid:
   version: "10.6.0"
+  config:
+    theme: neutral
+    themeVariables:
+      actorLineColor: "#4a5568"
+      signalColor: "#4a5568"
+      lineColor: "#4a5568"
 
 # Search
 search_enabled: true
