@@ -30,21 +30,12 @@
 
   /* All lines and arrows - dark gray */
   .mermaid path,
-  .mermaid line,
   .mermaid .edgePath path,
   .mermaid .flowchart-link,
   .mermaid .messageLine0,
   .mermaid .messageLine1,
   .mermaid .relation {
     stroke: #4a5568 !important;
-  }
-
-  /* Sequence diagram lifelines - target actor lines by ID pattern */
-  .mermaid line[id^="actor"],
-  .mermaid svg line[id^="actor"],
-  .mermaid line[class="200"],
-  .mermaid svg line[class="200"] {
-    stroke: #000000 !important;
   }
 
   /* Sequence diagram message lines */
@@ -106,76 +97,26 @@
   }
 </style>
 
-<!-- Mermaid configuration for sequence diagrams -->
-<script type="module">
-  const mermaidConfig = {
-    startOnLoad: true,
-    theme: 'base',
-    themeVariables: {
-      background: '#d5d0c8',
-      primaryColor: '#c5c0b8',
-      primaryTextColor: '#2c3e50',
-      primaryBorderColor: '#8a8578',
-      lineColor: '#4a5568',
-      textColor: '#2c3e50',
-      // Sequence diagram specific
-      actorBkg: '#c5c0b8',
-      actorBorder: '#8a8578',
-      actorTextColor: '#2c3e50',
-      actorLineColor: '#4a5568',
-      signalColor: '#4a5568',
-      signalTextColor: '#2c3e50',
-      noteBkgColor: '#ddd8c8',
-      noteBorderColor: '#a89878',
-      noteTextColor: '#2c3e50',
-      sequenceNumberColor: '#2c3e50'
-    },
-    sequence: {
-      actorMargin: 50,
-      showSequenceNumbers: false,
-      useMaxWidth: true
+<!-- Fix sequence diagram lifelines after mermaid renders -->
+<script>
+(function() {
+  function fixActorLines() {
+    var lines = document.querySelectorAll('line[id^="actor"]');
+    for (var i = 0; i < lines.length; i++) {
+      lines[i].setAttribute('stroke', '#000000');
     }
-  };
+  }
 
-  // Wait for mermaid to be available and re-initialize
-  if (typeof mermaid !== 'undefined') {
-    mermaid.initialize(mermaidConfig);
+  // Run after page fully loads
+  if (document.readyState === 'complete') {
+    setTimeout(fixActorLines, 500);
+    setTimeout(fixActorLines, 1500);
   } else {
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof mermaid !== 'undefined') {
-        mermaid.initialize(mermaidConfig);
-      }
+    window.addEventListener('load', function() {
+      setTimeout(fixActorLines, 500);
+      setTimeout(fixActorLines, 1500);
+      setTimeout(fixActorLines, 3000);
     });
   }
-
-  // Fix lifeline colors after mermaid renders
-  function fixLifelineColors() {
-    // Target actor lifelines specifically
-    document.querySelectorAll('.mermaid svg line[id^="actor"], .mermaid svg line[class="200"]').forEach(function(line) {
-      line.setAttribute('stroke', '#000000');
-      line.style.setProperty('stroke', '#000000', 'important');
-    });
-  }
-
-  // Run multiple times to catch async rendering
-  window.addEventListener('load', function() {
-    setTimeout(fixLifelineColors, 100);
-    setTimeout(fixLifelineColors, 500);
-    setTimeout(fixLifelineColors, 1000);
-    setTimeout(fixLifelineColors, 2000);
-    setTimeout(fixLifelineColors, 3000);
-  });
-
-  // Also use MutationObserver to catch dynamically rendered diagrams
-  const observer = new MutationObserver(function(mutations) {
-    setTimeout(fixLifelineColors, 50);
-    setTimeout(fixLifelineColors, 200);
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.mermaid').forEach(function(el) {
-      observer.observe(el, { childList: true, subtree: true });
-    });
-    setTimeout(fixLifelineColors, 100);
-  });
+})();
 </script>
