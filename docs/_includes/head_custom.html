@@ -40,6 +40,27 @@
     stroke: #4a5568 !important;
   }
 
+  /* Sequence diagram lifelines - ensure visibility */
+  .mermaid .sequenceDiagram line,
+  .mermaid line.actor-line,
+  .mermaid .lifeline,
+  .mermaid line[class*="actor"] {
+    stroke: #4a5568 !important;
+    stroke-width: 1.5px !important;
+    stroke-dasharray: 5, 3 !important;
+  }
+
+  /* Sequence diagram message lines */
+  .mermaid .messageText {
+    fill: #2c3e50 !important;
+  }
+
+  .mermaid .messageLine0,
+  .mermaid .messageLine1 {
+    stroke: #4a5568 !important;
+    stroke-width: 1.5px !important;
+  }
+
   .mermaid marker path,
   .mermaid .arrowheadPath {
     fill: #4a5568 !important;
