@@ -27,42 +27,57 @@ jobs:
           # Part 1 - Getting Started
           - example: part1/hello-world
             board: qemu_cortex_m3
+            artifact: part1-hello-world
           - example: part1/blinky
             board: qemu_cortex_m3
+            artifact: part1-blinky
 
           # Part 3 - Threading
           - example: part3/threads
             board: qemu_cortex_m3
+            artifact: part3-threads
           - example: part3/timers
             board: qemu_cortex_m3
+            artifact: part3-timers
           - example: part3/workqueue
             board: qemu_cortex_m3
+            artifact: part3-workqueue
 
           # Part 4 - Synchronization
           - example: part4/mutex
             board: qemu_cortex_m3
+            artifact: part4-mutex
           - example: part4/semaphore
             board: qemu_cortex_m3
+            artifact: part4-semaphore
           - example: part4/msgq
             board: qemu_cortex_m3
+            artifact: part4-msgq
           - example: part4/zbus
             board: qemu_cortex_m3
+            artifact: part4-zbus
 
           # Part 5 - Hardware (use native_sim for portability)
           - example: part5/gpio
             board: native_sim
+            artifact: part5-gpio
           - example: part5/i2c-sensor
             board: native_sim
+            artifact: part5-i2c-sensor
           - example: part5/uart
             board: native_sim
+            artifact: part5-uart
 
           # Part 6 - Connectivity
           - example: part6/tcp-client
             board: native_sim
+            artifact: part6-tcp-client
           - example: part6/mqtt
             board: native_sim
+            artifact: part6-mqtt
           - example: part6/ble-peripheral
             board: nrf52840dk/nrf52840
+            artifact: part6-ble-peripheral
 
     name: Build ${{ matrix.example }}
 
@@ -145,7 +160,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: build-${{ matrix.example | replace('/', '-') }}
+          name: build-${{ matrix.artifact }}
           path: examples/build/${{ matrix.example }}/zephyr/zephyr.*
           retention-days: 7
           if-no-files-found: ignore
