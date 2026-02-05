@@ -1,6 +1,6 @@
 // Ensure logo has proper height with horizontal padding
 .site-logo {
-  min-height: 56px;
+  min-height: 67px;
   padding-left: 7%;
   padding-right: 7%;
 }
@@ -8,6 +8,6 @@
 // On larger screens, make logo bigger
 @media (min-width: 50rem) {
   .site-logo {
-    min-height: 72px;
+    min-height: 86px;
   }
 }
