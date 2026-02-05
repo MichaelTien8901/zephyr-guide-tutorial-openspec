@@ -26,55 +26,56 @@ jobs:
         include:
           # Part 1 - Getting Started
           - example: part1/hello-world
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part1-hello-world
           - example: part1/blinky
-            board: nrf52840dk_nrf52840
+            board: stm32f769i_disco
             artifact: part1-blinky
 
           # Part 3 - Threading
           - example: part3/threads
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part3-threads
           - example: part3/timers
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part3-timers
           - example: part3/workqueue
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part3-workqueue
 
           # Part 4 - Synchronization
           - example: part4/mutex
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part4-mutex
           - example: part4/semaphore
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part4-semaphore
           - example: part4/msgq
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part4-msgq
           - example: part4/zbus
-            board: qemu_cortex_m3
+            board: stm32f769i_disco
             artifact: part4-zbus
 
-          # Part 5 - Hardware (use nrf52840dk which has all peripherals)
+          # Part 5 - Hardware (STM32F769I-DISCO has LED, buttons, I2C, UART)
           - example: part5/gpio
-            board: nrf52840dk_nrf52840
+            board: stm32f769i_disco
             artifact: part5-gpio
           - example: part5/i2c-sensor
-            board: nrf52840dk_nrf52840
+            board: stm32f769i_disco
             artifact: part5-i2c-sensor
           - example: part5/uart
-            board: nrf52840dk_nrf52840
+            board: stm32f769i_disco
             artifact: part5-uart
 
-          # Part 6 - Connectivity
+          # Part 6 - Connectivity (STM32F769I-DISCO has Ethernet)
           - example: part6/tcp-client
-            board: native_sim
+            board: stm32f769i_disco
             artifact: part6-tcp-client
           - example: part6/mqtt
-            board: native_sim
+            board: stm32f769i_disco
             artifact: part6-mqtt
+          # BLE requires Nordic board
           - example: part6/ble-peripheral
             board: nrf52840dk_nrf52840
             artifact: part6-ble-peripheral
@@ -131,10 +132,8 @@ jobs:
       - name: Install Zephyr SDK toolchains
         run: |
           cd ~/zephyr-sdk-${ZEPHYR_SDK_VERSION}
-          # Install ARM toolchain (for qemu_cortex_m3, nrf52840dk)
+          # Install ARM toolchain (for STM32, nRF boards)
           ./setup.sh -t arm-zephyr-eabi -h -c || true
-          # Install host tools for native_sim
-          ./setup.sh -t x86_64-zephyr-elf -h -c || true
 
       - name: Initialize West workspace
         run: |
@@ -178,18 +177,18 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Example | Board |" >> $GITHUB_STEP_SUMMARY
           echo "|---------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| part1/hello-world | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part1/blinky | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part3/threads | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part3/timers | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part3/workqueue | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part4/mutex | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part4/semaphore | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part4/msgq | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part4/zbus | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part5/gpio | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part5/i2c-sensor | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part5/uart | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part6/tcp-client | native_sim |" >> $GITHUB_STEP_SUMMARY
-          echo "| part6/mqtt | native_sim |" >> $GITHUB_STEP_SUMMARY
+          echo "| part1/hello-world | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part1/blinky | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part3/threads | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part3/timers | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part3/workqueue | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part4/mutex | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part4/semaphore | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part4/msgq | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part4/zbus | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part5/gpio | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part5/i2c-sensor | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part5/uart | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part6/tcp-client | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
+          echo "| part6/mqtt | stm32f769i_disco |" >> $GITHUB_STEP_SUMMARY
           echo "| part6/ble-peripheral | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
