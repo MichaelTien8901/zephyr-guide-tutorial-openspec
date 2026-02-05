@@ -6,6 +6,9 @@ description: >-
 baseurl: "/zephyr-guide-tutorial-openspec"
 url: ""
 
+# Logo
+logo: "/assets/zephyr_logo.png"
+
 # Theme
 theme: just-the-docs
 color_scheme: dark
