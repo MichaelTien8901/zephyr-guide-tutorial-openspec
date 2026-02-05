@@ -149,12 +149,12 @@ jobs:
         run: pip3 install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 
       - name: Build example
-        env:
-          ZEPHYR_BASE: ~/zephyrproject/zephyr
-          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-${{ env.ZEPHYR_SDK_VERSION }}
         run: |
-          cd $GITHUB_WORKSPACE/examples
-          west build -b ${{ matrix.board }} ${{ matrix.example }} --build-dir build/${{ matrix.example }}
+          export ZEPHYR_BASE=~/zephyrproject/zephyr
+          export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-${ZEPHYR_SDK_VERSION}
+          cd ~/zephyrproject
+          west build -b ${{ matrix.board }} $GITHUB_WORKSPACE/examples/${{ matrix.example }} \
+            --build-dir $GITHUB_WORKSPACE/examples/build/${{ matrix.example }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
