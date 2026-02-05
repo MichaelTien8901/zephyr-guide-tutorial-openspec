@@ -122,7 +122,7 @@ static void mqtt_evt_handler(struct mqtt_client *c,
 }
 
 /* Configure MQTT client */
-static int mqtt_client_init(void)
+static int app_mqtt_init(void)
 {
 	struct sockaddr_in *broker4 = (struct sockaddr_in *)&broker;
 
@@ -131,7 +131,7 @@ static int mqtt_client_init(void)
 	broker4->sin_port = htons(MQTT_BROKER_PORT);
 	inet_pton(AF_INET, MQTT_BROKER_ADDR, &broker4->sin_addr);
 
-	/* Initialize client */
+	/* Initialize client using Zephyr MQTT API */
 	mqtt_client_init(&client);
 
 	/* Client configuration */
@@ -154,10 +154,11 @@ static int mqtt_client_init(void)
 }
 
 /* Connect to MQTT broker */
-static int mqtt_connect(void)
+static int app_mqtt_connect(void)
 {
 	int ret;
 
+	/* Call Zephyr MQTT connect API */
 	ret = mqtt_connect(&client);
 	if (ret != 0) {
 		printk("[MQTT] Connect failed: %d\n", ret);
@@ -272,10 +273,10 @@ int main(void)
 	k_sleep(K_SECONDS(5));
 
 	/* Initialize MQTT client */
-	mqtt_client_init();
+	app_mqtt_init();
 
 	/* Connect to broker */
-	ret = mqtt_connect();
+	ret = app_mqtt_connect();
 	if (ret != 0) {
 		printk("Failed to connect to MQTT broker\n");
 		return ret;

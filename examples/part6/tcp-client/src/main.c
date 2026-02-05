@@ -33,18 +33,16 @@ static int wait_for_network(void)
 	/* Start DHCP */
 	net_dhcpv4_start(iface);
 
-	/* Wait for address */
+	/* Wait for address - check if interface is up and has addresses */
 	int attempts = 0;
 	while (attempts < 30) {
-		struct net_if_addr *unicast;
-
-		unicast = net_if_ipv4_addr_lookup_by_index(iface, 1);
-		if (unicast && unicast->addr_state == NET_ADDR_PREFERRED) {
-			char addr_str[NET_IPV4_ADDR_LEN];
-			net_addr_ntop(AF_INET, &unicast->address.in_addr,
-				      addr_str, sizeof(addr_str));
-			printk("Got IP address: %s\n", addr_str);
-			return 0;
+		if (net_if_is_up(iface)) {
+			struct in_addr addr = {0};
+			/* Get first unicast address */
+			if (net_if_ipv4_get_global_addr(iface, NET_ADDR_PREFERRED)) {
+				printk("Network is ready\n");
+				return 0;
+			}
 		}
 
 		k_sleep(K_SECONDS(1));

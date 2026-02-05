@@ -29,7 +29,7 @@ jobs:
             board: qemu_cortex_m3
             artifact: part1-hello-world
           - example: part1/blinky
-            board: qemu_cortex_m3
+            board: nrf52840dk_nrf52840
             artifact: part1-blinky
 
           # Part 3 - Threading
@@ -57,15 +57,15 @@ jobs:
             board: qemu_cortex_m3
             artifact: part4-zbus
 
-          # Part 5 - Hardware (use native_sim for portability)
+          # Part 5 - Hardware (use nrf52840dk which has all peripherals)
           - example: part5/gpio
-            board: native_sim
+            board: nrf52840dk_nrf52840
             artifact: part5-gpio
           - example: part5/i2c-sensor
-            board: native_sim
+            board: nrf52840dk_nrf52840
             artifact: part5-i2c-sensor
           - example: part5/uart
-            board: native_sim
+            board: nrf52840dk_nrf52840
             artifact: part5-uart
 
           # Part 6 - Connectivity
@@ -76,7 +76,7 @@ jobs:
             board: native_sim
             artifact: part6-mqtt
           - example: part6/ble-peripheral
-            board: nrf52840dk/nrf52840
+            board: nrf52840dk_nrf52840
             artifact: part6-ble-peripheral
 
     name: Build ${{ matrix.example }}
@@ -179,7 +179,7 @@ jobs:
           echo "| Example | Board |" >> $GITHUB_STEP_SUMMARY
           echo "|---------|-------|" >> $GITHUB_STEP_SUMMARY
           echo "| part1/hello-world | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part1/blinky | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
+          echo "| part1/blinky | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
           echo "| part3/threads | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
           echo "| part3/timers | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
           echo "| part3/workqueue | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
@@ -187,9 +187,9 @@ jobs:
           echo "| part4/semaphore | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
           echo "| part4/msgq | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
           echo "| part4/zbus | qemu_cortex_m3 |" >> $GITHUB_STEP_SUMMARY
-          echo "| part5/gpio | native_sim |" >> $GITHUB_STEP_SUMMARY
-          echo "| part5/i2c-sensor | native_sim |" >> $GITHUB_STEP_SUMMARY
-          echo "| part5/uart | native_sim |" >> $GITHUB_STEP_SUMMARY
+          echo "| part5/gpio | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
+          echo "| part5/i2c-sensor | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
+          echo "| part5/uart | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
           echo "| part6/tcp-client | native_sim |" >> $GITHUB_STEP_SUMMARY
           echo "| part6/mqtt | native_sim |" >> $GITHUB_STEP_SUMMARY
-          echo "| part6/ble-peripheral | nrf52840dk/nrf52840 |" >> $GITHUB_STEP_SUMMARY
+          echo "| part6/ble-peripheral | nrf52840dk_nrf52840 |" >> $GITHUB_STEP_SUMMARY
