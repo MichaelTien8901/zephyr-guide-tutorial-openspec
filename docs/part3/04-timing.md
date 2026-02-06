@@ -318,6 +318,10 @@ CONFIG_TICKLESS_KERNEL=y
 4. **Use absolute timeouts for periodic tasks** - Prevents drift
 5. **Check timeout return values** - Handle -EAGAIN appropriately
 
+## Example Code
+
+See the complete [Timers Example]({% link examples/part3/timers/src/main.c %}) demonstrating timer creation, periodic callbacks, and timing patterns.
+
 ## Next Steps
 
 Learn about [Workqueues]({% link part3/05-workqueues.md %}) for deferred work processing.

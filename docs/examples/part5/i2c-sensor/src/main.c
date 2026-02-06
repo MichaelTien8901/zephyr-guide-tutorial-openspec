@@ -9,6 +9,7 @@
 #include <zephyr/device.h>
 #include <zephyr/drivers/i2c.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/random/random.h>
 
 LOG_MODULE_REGISTER(i2c_sensor, LOG_LEVEL_DBG);
 
@@ -35,7 +36,7 @@ static const struct device *i2c_dev = DEVICE_DT_GET(I2C_NODE);
 static int read_temperature(int16_t *temp_raw)
 {
 #if SIMULATION_MODE
-	/* Simulate temperature reading */
+	/* Simulate temperature reading using hardware RNG */
 	static int16_t sim_temp = 2500;  /* 25.00°C in 0.01°C units */
 	sim_temp += (sys_rand32_get() % 100) - 50;
 	*temp_raw = sim_temp;

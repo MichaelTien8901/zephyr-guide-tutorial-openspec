@@ -14,6 +14,7 @@
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/services/bas.h>
+#include <zephyr/random/random.h>
 
 /* Custom UUIDs for sensor service */
 #define BT_UUID_SENSOR_SERVICE_VAL \

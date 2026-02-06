@@ -510,6 +510,10 @@ CONFIG_UART_ASYNC_API=y
 5. **Use double buffering** - For async API continuous reception
 6. **Configure appropriate timeout** - For async RX partial buffer flush
 
+## Example Code
+
+See the complete [UART Example]({% link examples/part5/uart/src/main.c %}) demonstrating serial communication with interrupt-driven I/O.
+
 ## Next Steps
 
 Learn about [Custom Drivers]({% link part5/07-custom-drivers.md %}) to write your own device drivers.

@@ -6,6 +6,7 @@
 
 #include <zephyr/kernel.h>
 #include <zephyr/zbus/zbus.h>
+#include <zephyr/random/random.h>
 
 /* Message structure */
 struct sensor_data {
@@ -62,7 +63,7 @@ K_THREAD_DEFINE(logger_tid, 1024, logger_thread_entry, NULL, NULL, NULL, 7, 0, 0
 ZBUS_CHAN_ADD_OBS(sensor_chan, display_lis, 0);
 ZBUS_CHAN_ADD_OBS(sensor_chan, logger_sub, 1);
 
-/* Simulated sensor reading */
+/* Simulated sensor reading using hardware RNG */
 static int32_t read_temperature(void)
 {
 	static int32_t temp = 22000;  /* 22.000°C */

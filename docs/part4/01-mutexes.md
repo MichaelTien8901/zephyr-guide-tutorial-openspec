@@ -271,6 +271,10 @@ k_mutex_lock(&mutex_a, K_FOREVER);  /* Waits for Thread 1 */
 /* Solution: Always lock in same order */
 ```
 
+## Example Code
+
+See the complete [Mutex Example]({% link examples/part4/mutex/src/main.c %}) demonstrating mutex usage for protecting shared resources.
+
 ## Next Steps
 
 Learn about [Semaphores]({% link part4/02-semaphores.md %}) for signaling and counting.

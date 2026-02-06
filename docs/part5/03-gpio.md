@@ -417,6 +417,10 @@ int gpio_remove_callback(const struct device *port,
 5. **Implement debouncing** - For mechanical switches
 6. **Use port operations** - When setting multiple pins simultaneously
 
+## Example Code
+
+See the complete [GPIO Example]({% link examples/part5/gpio/src/main.c %}) demonstrating LED control and button input with interrupts.
+
 ## Next Steps
 
 Learn about [I2C]({% link part5/04-i2c.md %}) for communicating with peripherals.

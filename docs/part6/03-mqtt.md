@@ -416,6 +416,10 @@ K_THREAD_DEFINE(mqtt_thread, 2048, mqtt_thread_entry, NULL, NULL, NULL, 7, 0, 0)
 5. **Use LWT** - Notify others of unexpected disconnect
 6. **Implement backoff** - For reconnection attempts
 
+## Example Code
+
+See the complete [MQTT Example]({% link examples/part6/mqtt/src/main.c %}) demonstrating MQTT publish-subscribe communication.
+
 ## Next Steps
 
 Learn about [CoAP]({% link part6/04-coap.md %}) for constrained networks.

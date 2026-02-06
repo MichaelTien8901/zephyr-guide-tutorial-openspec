@@ -237,6 +237,13 @@ which qemu-system-arm
 sudo apt install qemu-system-arm
 ```
 
+## Example Code
+
+Complete, tested examples are available:
+
+- [Hello World Example]({% link examples/part1/hello-world/src/main.c %}) - Basic application
+- [Blinky Example]({% link examples/part1/blinky/src/main.c %}) - LED blinking with GPIO
+
 ## Exercises
 
 1. **Modify the message**: Change the print statement and rebuild

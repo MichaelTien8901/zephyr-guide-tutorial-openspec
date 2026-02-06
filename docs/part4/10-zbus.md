@@ -413,6 +413,10 @@ int zbus_chan_rm_obs(const struct zbus_channel *chan,
                      const struct zbus_observer *obs, k_timeout_t timeout);
 ```
 
+## Example Code
+
+See the complete [Zbus Example]({% link examples/part4/zbus/src/main.c %}) demonstrating publish-subscribe communication between components.
+
 ## Next Steps
 
 Return to the [IPC Selection Guide]({% link part4/09-ipc-selection.md %}) to understand when to use Zbus vs other IPC mechanisms.

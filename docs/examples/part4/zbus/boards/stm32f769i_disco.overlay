@@ -1,0 +1,4 @@
+/* Enable hardware RNG for random number generation */
+&rng {
+	status = "okay";
+};

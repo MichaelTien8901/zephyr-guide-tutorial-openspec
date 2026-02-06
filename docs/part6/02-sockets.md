@@ -458,6 +458,10 @@ int zsock_getsockopt(int sock, int level, int optname,
 5. **Poll for multiple sockets** - Don't create thread per connection
 6. **Enable keepalive** - Detect dead connections
 
+## Example Code
+
+See the complete [TCP Client Example]({% link examples/part6/tcp-client/src/main.c %}) demonstrating socket-based TCP communication.
+
 ## Next Steps
 
 Learn about [MQTT]({% link part6/03-mqtt.md %}) for IoT messaging.

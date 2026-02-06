@@ -165,6 +165,10 @@ void producer(struct sensor_data *data)
 3. **Handle queue full** - Don't assume put always succeeds
 4. **Match producers and consumers** - Avoid persistent overflow
 
+## Example Code
+
+See the complete [Message Queue Example]({% link examples/part4/msgq/src/main.c %}) demonstrating producer-consumer patterns with message queues.
+
 ## Next Steps
 
 Learn about [FIFOs and LIFOs]({% link part4/06-fifos-lifos.md %}) for variable-size data.

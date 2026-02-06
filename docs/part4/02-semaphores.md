@@ -275,6 +275,10 @@ k_sem_give(&signal_sem);  /* Count still = 1 (limited) */
 
 Semaphores don't have priority inheritance. If this is a concern, use mutex.
 
+## Example Code
+
+See the complete [Semaphore Example]({% link examples/part4/semaphore/src/main.c %}) demonstrating signaling and resource counting patterns.
+
 ## Next Steps
 
 Learn about [Condition Variables]({% link part4/03-condition-variables.md %}) for complex synchronization.

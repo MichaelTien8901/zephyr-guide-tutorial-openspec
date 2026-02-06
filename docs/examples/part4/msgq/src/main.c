@@ -5,6 +5,7 @@
  */
 
 #include <zephyr/kernel.h>
+#include <zephyr/random/random.h>
 
 #define STACK_SIZE 1024
 
@@ -24,7 +25,7 @@ struct sensor_msg {
 /* Define message queue: message size, max count, alignment */
 K_MSGQ_DEFINE(sensor_msgq, sizeof(struct sensor_msg), 10, 4);
 
-/* Simulated sensor reading */
+/* Simulated sensor reading using hardware RNG */
 static int16_t read_temperature(void)
 {
 	static int16_t temp = 200;  /* Start at 20.0°C */

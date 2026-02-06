@@ -286,6 +286,10 @@ K_THREAD_DEFINE(sensor_thread, 1024, sensor_notify_thread, NULL, NULL, NULL, 7, 
 4. **Use appropriate permissions** - Based on data sensitivity
 5. **Limit notification rate** - Avoid flooding the connection
 
+## Example Code
+
+See the complete [BLE Peripheral Example]({% link examples/part6/ble-peripheral/src/main.c %}) demonstrating a GATT server with custom services.
+
 ## Next Steps
 
 Learn about [GATT Client]({% link part6/11-ble-gatt-client.md %}) for reading remote services.

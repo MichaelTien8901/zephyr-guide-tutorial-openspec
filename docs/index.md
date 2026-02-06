@@ -48,7 +48,7 @@ Welcome to the comprehensive Zephyr RTOS programming guide. This tutorial takes 
 
 ## Sample Code
 
-All examples in this guide are tested and available in the [examples/](https://github.com/MichaelTien8901/zephyr-guide-tutorial-openspec/tree/main/examples) directory. Each example includes:
+All examples in this guide are tested and available in the [examples/]({% link examples/README.md %}) directory. Each example includes:
 
 - Complete, buildable Zephyr application
 - Detailed comments explaining the code

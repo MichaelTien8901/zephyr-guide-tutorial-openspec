@@ -294,6 +294,10 @@ kernel threads
 kernel stacks
 ```
 
+## Example Code
+
+See the complete [Threads Example]({% link examples/part3/threads/src/main.c %}) demonstrating thread creation and coordination.
+
 ## Next Steps
 
 Learn about [Scheduling]({% link part3/02-scheduling.md %}) to understand how threads share the CPU.

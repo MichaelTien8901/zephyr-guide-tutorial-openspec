@@ -356,6 +356,10 @@ CONFIG_SYSTEM_WORKQUEUE_PRIORITY=0
 4. **Don't submit same work item twice** - Check `k_work_is_pending()`
 5. **Initialize work items once** - Usually at startup
 
+## Example Code
+
+See the complete [Workqueue Example]({% link examples/part3/workqueue/src/main.c %}) demonstrating basic work items, delayed work, and custom workqueues.
+
 ## Next Steps
 
 Learn about [Kernel Objects]({% link part3/06-kernel-objects.md %}) to choose the right synchronization primitives.
