@@ -2,7 +2,7 @@
 layout: default
 title: "Docker Setup"
 parent: "Part 1: Getting Started"
-nav_order: 5
+nav_order: 6
 ---
 
 # Docker-Based Development
@@ -279,4 +279,4 @@ On macOS/Windows, enable these Docker Desktop settings:
 
 ## Next Steps
 
-Set up your [IDE]({% link part1/06-ide-setup.md %}) for the best development experience.
+Set up your [IDE]({% link part1/07-ide-setup.md %}) for the best development experience.

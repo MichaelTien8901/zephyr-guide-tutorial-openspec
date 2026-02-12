@@ -2,7 +2,7 @@
 layout: default
 title: "West Setup"
 parent: "Part 1: Getting Started"
-nav_order: 3
+nav_order: 4
 ---
 
 # Setting Up West
@@ -245,4 +245,4 @@ west build -p
 
 ## Next Steps
 
-Now let's configure the [toolchains]({% link part1/04-toolchains.md %}) for your target architecture.
+Now let's configure the [toolchains]({% link part1/05-toolchains.md %}) for your target architecture.

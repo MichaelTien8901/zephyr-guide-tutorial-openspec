@@ -2,7 +2,7 @@
 layout: default
 title: "Device Tree"
 parent: "Part 2: Build System"
-nav_order: 4
+nav_order: 5
 ---
 
 # Device Tree Fundamentals
@@ -341,4 +341,4 @@ cat build/zephyr/zephyr.dts | grep -A 10 "my_node"
 
 ## Next Steps
 
-Learn about [Device Tree Overlays]({% link part2/05-overlays.md %}) to customize hardware for your application.
+Learn about [Device Tree Overlays]({% link part2/06-overlays.md %}) to customize hardware for your application.

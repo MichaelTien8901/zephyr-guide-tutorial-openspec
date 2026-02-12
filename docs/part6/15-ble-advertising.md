@@ -2,7 +2,7 @@
 layout: default
 title: "BLE Advertising"
 parent: "Part 6: Advanced Topics"
-nav_order: 8
+nav_order: 15
 ---
 
 # BLE Advertising
@@ -247,4 +247,4 @@ bool is_advertising = bt_le_adv_is_active();
 
 ## Next Steps
 
-Learn about [BLE Scanning]({% link part6/09-ble-scanning.md %}) for discovering devices.
+Learn about [BLE Scanning]({% link part6/16-ble-scanning.md %}) for discovering devices.

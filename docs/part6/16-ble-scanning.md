@@ -2,7 +2,7 @@
 layout: default
 title: "BLE Scanning"
 parent: "Part 6: Advanced Topics"
-nav_order: 9
+nav_order: 16
 ---
 
 # BLE Scanning
@@ -257,4 +257,4 @@ if (err) {
 
 ## Next Steps
 
-Learn about [GATT Server]({% link part6/10-ble-gatt-server.md %}) for creating services.
+Learn about [GATT Server]({% link part6/17-ble-gatt-server.md %}) for creating services.

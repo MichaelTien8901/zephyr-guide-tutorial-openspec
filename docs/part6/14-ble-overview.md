@@ -2,7 +2,7 @@
 layout: default
 title: "BLE Overview"
 parent: "Part 6: Advanced Topics"
-nav_order: 7
+nav_order: 14
 ---
 
 # Bluetooth Low Energy Overview
@@ -250,4 +250,4 @@ uart:~$ bt security 2
 
 ## Next Steps
 
-Learn about [BLE Advertising]({% link part6/08-ble-advertising.md %}) for broadcasting data.
+Learn about [BLE Advertising]({% link part6/15-ble-advertising.md %}) for broadcasting data.

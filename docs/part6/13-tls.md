@@ -2,7 +2,7 @@
 layout: default
 title: "TLS"
 parent: "Part 6: Advanced Topics"
-nav_order: 6
+nav_order: 13
 ---
 
 # TLS (Transport Layer Security)
@@ -266,4 +266,4 @@ zsock_setsockopt(sock, SOL_TLS, TLS_SESSION_CACHE, &enabled, sizeof(enabled));
 
 ## Next Steps
 
-Learn about [BLE Overview]({% link part6/07-ble-overview.md %}) for Bluetooth Low Energy.
+Learn about [BLE Overview]({% link part6/14-ble-overview.md %}) for Bluetooth Low Energy.

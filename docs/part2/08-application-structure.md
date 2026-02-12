@@ -2,7 +2,7 @@
 layout: default
 title: "Application Structure"
 parent: "Part 2: Build System"
-nav_order: 6
+nav_order: 8
 ---
 
 # Zephyr Application Structure

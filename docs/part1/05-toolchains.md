@@ -2,7 +2,7 @@
 layout: default
 title: "Toolchains"
 parent: "Part 1: Getting Started"
-nav_order: 4
+nav_order: 5
 ---
 
 # Toolchain Configuration
@@ -216,4 +216,4 @@ west build -p -- -DZEPHYR_TOOLCHAIN_VARIANT=zephyr
 
 ## Next Steps
 
-Learn how to set up a [Docker environment]({% link part1/05-docker-setup.md %}) for reproducible builds.
+Learn how to set up a [Docker environment]({% link part1/06-docker-setup.md %}) for reproducible builds.

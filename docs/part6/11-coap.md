@@ -2,7 +2,7 @@
 layout: default
 title: "CoAP"
 parent: "Part 6: Advanced Topics"
-nav_order: 4
+nav_order: 11
 ---
 
 # CoAP Protocol
@@ -376,4 +376,4 @@ uint8_t coap_header_get_token(const struct coap_packet *cpkt, uint8_t *token);
 
 ## Next Steps
 
-Learn about [HTTP]({% link part6/05-http.md %}) for web communication.
+Learn about [HTTP]({% link part6/12-http.md %}) for web communication.

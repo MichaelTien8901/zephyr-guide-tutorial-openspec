@@ -2,7 +2,7 @@
 layout: default
 title: "Networking Overview"
 parent: "Part 6: Advanced Topics"
-nav_order: 1
+nav_order: 8
 ---
 
 # Networking Overview
@@ -313,4 +313,4 @@ uart:~$ net stats
 
 ## Next Steps
 
-Learn about [Sockets]({% link part6/02-sockets.md %}) for TCP/UDP communication.
+Learn about [Sockets]({% link part6/09-sockets.md %}) for TCP/UDP communication.

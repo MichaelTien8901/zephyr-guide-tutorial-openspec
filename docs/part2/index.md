@@ -14,8 +14,8 @@ This section covers Zephyr's powerful build system, including west, CMake, Kconf
 
 - Deep dive into west commands and workspace management
 - CMake build system structure and customization
-- Kconfig configuration system and best practices
-- Device tree fundamentals and overlays
+- Kconfig configuration system and troubleshooting
+- Device tree fundamentals, overlays, and troubleshooting
 - Standard application structure and organization
 
 ## Chapters
@@ -25,9 +25,11 @@ This section covers Zephyr's powerful build system, including west, CMake, Kconf
 | [West Commands]({% link part2/01-west-commands.md %}) | Complete west command reference with workflows |
 | [CMake Basics]({% link part2/02-cmake-basics.md %}) | CMakeLists.txt structure and build flow |
 | [Kconfig]({% link part2/03-kconfig.md %}) | Configuration system with hierarchy diagrams |
-| [Device Tree]({% link part2/04-device-tree.md %}) | DTS fundamentals and syntax |
-| [Overlays]({% link part2/05-overlays.md %}) | Device tree overlays and config fragments |
-| [Application Structure]({% link part2/06-application-structure.md %}) | Standard Zephyr app layout |
+| [Kconfig Troubleshooting]({% link part2/04-kconfig-troubleshooting.md %}) | Common Kconfig errors and how to fix them |
+| [Device Tree]({% link part2/05-device-tree.md %}) | DTS fundamentals and syntax |
+| [Overlays]({% link part2/06-overlays.md %}) | Device tree overlays and config fragments |
+| [Devicetree Troubleshooting]({% link part2/07-devicetree-troubleshooting.md %}) | Decoding DTS errors and debugging strategies |
+| [Application Structure]({% link part2/08-application-structure.md %}) | Standard Zephyr app layout |
 
 ## Build System Overview
 

@@ -2,7 +2,7 @@
 layout: default
 title: "Hello World"
 parent: "Part 1: Getting Started"
-nav_order: 7
+nav_order: 8
 ---
 
 # Your First Zephyr Application

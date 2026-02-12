@@ -134,4 +134,4 @@ The built-in test framework runs tests across multiple boards and QEMU targets.
 
 ## Next Steps
 
-Now that you understand what Zephyr is, let's [install the SDK]({% link part1/02-installation.md %}).
+Now that you understand what Zephyr is, let's [install the SDK]({% link part1/03-installation.md %}).

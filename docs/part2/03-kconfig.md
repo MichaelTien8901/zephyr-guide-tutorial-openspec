@@ -336,4 +336,4 @@ west build -t guiconfig
 
 ## Next Steps
 
-Learn about [Device Tree]({% link part2/04-device-tree.md %}) to describe your hardware.
+Learn about [Device Tree]({% link part2/05-device-tree.md %}) to describe your hardware.

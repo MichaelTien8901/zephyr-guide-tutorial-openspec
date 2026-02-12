@@ -2,7 +2,7 @@
 layout: default
 title: "Installation"
 parent: "Part 1: Getting Started"
-nav_order: 2
+nav_order: 3
 ---
 
 # Installing the Zephyr SDK
@@ -179,4 +179,4 @@ Don't run pip with sudo. Use `--user` flag or a virtual environment.
 
 ## Next Steps
 
-With the SDK installed, let's [set up west]({% link part1/03-west-setup.md %}) to manage your Zephyr workspace.
+With the SDK installed, let's [set up west]({% link part1/04-west-setup.md %}) to manage your Zephyr workspace.

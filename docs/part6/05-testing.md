@@ -2,7 +2,7 @@
 layout: default
 title: "Testing"
 parent: "Part 6: Advanced Topics"
-nav_order: 16
+nav_order: 5
 ---
 
 # Testing in Zephyr

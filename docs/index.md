@@ -17,15 +17,15 @@ Welcome to the comprehensive Zephyr RTOS programming guide. This tutorial takes 
 - **Kernel Essentials**: Threads, scheduling, interrupts, timing, and kernel objects
 - **Synchronization & IPC**: Mutexes, semaphores, message queues, and inter-thread communication
 - **Device Drivers**: GPIO, I2C, SPI, UART, and writing custom drivers
-- **Advanced Topics**: Networking, Bluetooth LE, power management, debugging, and testing
+- **Advanced Topics**: Logging, debugging, testing, quality assurance, networking, Bluetooth LE, and power management
 - **Professional Case Studies**: OpenBIC BMC firmware and ASPEED RoT security architecture
 
 ## Quick Start
 
 1. [Introduction to Zephyr]({% link part1/01-introduction.md %})
-2. [Install Zephyr SDK]({% link part1/02-installation.md %})
-3. [Set up West]({% link part1/03-west-setup.md %})
-4. [Write Hello World]({% link part1/07-hello-world.md %})
+2. [Install Zephyr SDK]({% link part1/03-installation.md %})
+3. [Set up West]({% link part1/04-west-setup.md %})
+4. [Write Hello World]({% link part1/08-hello-world.md %})
 
 ## How This Guide is Organized
 
@@ -36,7 +36,7 @@ Welcome to the comprehensive Zephyr RTOS programming guide. This tutorial takes 
 | [Part 3: Kernel Essentials]({% link part3/index.md %}) | Threads, scheduling, timing, workqueues | Intermediate |
 | [Part 4: Synchronization & IPC]({% link part4/index.md %}) | Mutexes, semaphores, queues, events | Intermediate |
 | [Part 5: Device Drivers]({% link part5/index.md %}) | Driver model, GPIO, I2C, SPI, UART | Intermediate |
-| [Part 6: Advanced Topics]({% link part6/index.md %}) | Networking, Bluetooth, power, debugging | Advanced |
+| [Part 6: Advanced Topics]({% link part6/index.md %}) | Logging, debugging, testing, QA, networking, Bluetooth, power | Advanced |
 | [Part 7: Case Studies]({% link part7/index.md %}) | OpenBIC, ASPEED RoT analysis | Professional |
 | [Appendices]({% link appendices/index.md %}) | Glossary, references, troubleshooting | Reference |
 
@@ -64,7 +64,7 @@ docker-compose exec zephyr west build -b qemu_cortex_m3 samples/hello_world
 docker-compose exec zephyr west build -t run
 ```
 
-See [Docker Setup]({% link part1/05-docker-setup.md %}) for details.
+See [Docker Setup]({% link part1/06-docker-setup.md %}) for details.
 
 ## Contributing
 

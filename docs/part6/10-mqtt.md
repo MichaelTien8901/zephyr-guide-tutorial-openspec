@@ -2,7 +2,7 @@
 layout: default
 title: "MQTT"
 parent: "Part 6: Advanced Topics"
-nav_order: 3
+nav_order: 10
 ---
 
 # MQTT Protocol
@@ -422,4 +422,4 @@ See the complete [MQTT Example]({% link examples/part6/mqtt/src/main.c %}) demon
 
 ## Next Steps
 
-Learn about [CoAP]({% link part6/04-coap.md %}) for constrained networks.
+Learn about [CoAP]({% link part6/11-coap.md %}) for constrained networks.

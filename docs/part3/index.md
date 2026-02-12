@@ -18,6 +18,7 @@ This section covers Zephyr's kernel fundamentals - threads, scheduling, interrup
 - Using timing services (delays, timers)
 - Working with workqueues
 - Choosing the right kernel objects
+- Memory management strategies for embedded systems
 
 ## Chapters
 
@@ -29,6 +30,7 @@ This section covers Zephyr's kernel fundamentals - threads, scheduling, interrup
 | [Timing]({% link part3/04-timing.md %}) | Kernel ticks, delays, sleep, timers |
 | [Workqueues]({% link part3/05-workqueues.md %}) | System workqueue and k_work |
 | [Kernel Objects]({% link part3/06-kernel-objects.md %}) | Object taxonomy and selection |
+| [Memory Management]({% link part3/07-memory-management.md %}) | Heaps, slabs, memory blocks, and allocation strategies |
 
 ## Kernel Architecture Overview
 

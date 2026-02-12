@@ -2,7 +2,7 @@
 layout: default
 title: "Sockets"
 parent: "Part 6: Advanced Topics"
-nav_order: 2
+nav_order: 9
 ---
 
 # Socket Programming
@@ -464,4 +464,4 @@ See the complete [TCP Client Example]({% link examples/part6/tcp-client/src/main
 
 ## Next Steps
 
-Learn about [MQTT]({% link part6/03-mqtt.md %}) for IoT messaging.
+Learn about [MQTT]({% link part6/10-mqtt.md %}) for IoT messaging.

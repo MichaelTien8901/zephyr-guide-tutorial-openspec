@@ -2,7 +2,7 @@
 layout: default
 title: "GATT Client"
 parent: "Part 6: Advanced Topics"
-nav_order: 11
+nav_order: 18
 ---
 
 # GATT Client
@@ -288,4 +288,4 @@ BT_CONN_CB_DEFINE(conn_callbacks) = {
 
 ## Next Steps
 
-Learn about [BLE Mesh]({% link part6/12-ble-mesh.md %}) for mesh networking.
+Learn about [BLE Mesh]({% link part6/19-ble-mesh.md %}) for mesh networking.

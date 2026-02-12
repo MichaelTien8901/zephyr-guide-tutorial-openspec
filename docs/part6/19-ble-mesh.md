@@ -2,7 +2,7 @@
 layout: default
 title: "BLE Mesh"
 parent: "Part 6: Advanced Topics"
-nav_order: 12
+nav_order: 19
 ---
 
 # Bluetooth Mesh
@@ -271,4 +271,4 @@ uart:~$ mesh reset
 
 ## Next Steps
 
-Learn about [Power Management]({% link part6/13-power-management.md %}) for low-power operation.
+Learn about [Power Management]({% link part6/20-power-management.md %}) for low-power operation.

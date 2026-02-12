@@ -2,7 +2,7 @@
 layout: default
 title: "HTTP"
 parent: "Part 6: Advanced Topics"
-nav_order: 5
+nav_order: 12
 ---
 
 # HTTP Client and Server
@@ -327,4 +327,4 @@ void handle_api_request(int sock, const char *method, const char *path,
 
 ## Next Steps
 
-Learn about [TLS]({% link part6/06-tls.md %}) for secure communication.
+Learn about [TLS]({% link part6/13-tls.md %}) for secure communication.

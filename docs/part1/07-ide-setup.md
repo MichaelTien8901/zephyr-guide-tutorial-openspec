@@ -2,7 +2,7 @@
 layout: default
 title: "IDE Setup"
 parent: "Part 1: Getting Started"
-nav_order: 6
+nav_order: 7
 ---
 
 # IDE Setup
@@ -282,4 +282,4 @@ ls build/compile_commands.json
 
 ## Next Steps
 
-Let's build your first [Hello World]({% link part1/07-hello-world.md %}) application!
+Let's build your first [Hello World]({% link part1/08-hello-world.md %}) application!

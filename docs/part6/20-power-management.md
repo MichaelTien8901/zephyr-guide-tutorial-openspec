@@ -2,7 +2,7 @@
 layout: default
 title: "Power Management"
 parent: "Part 6: Advanced Topics"
-nav_order: 13
+nav_order: 20
 ---
 
 # Power Management
@@ -265,4 +265,4 @@ void sensor_thread(void)
 
 ## Next Steps
 
-Learn about [Device PM]({% link part6/14-device-pm.md %}) for per-device power control.
+Learn about [Device PM]({% link part6/21-device-pm.md %}) for per-device power control.

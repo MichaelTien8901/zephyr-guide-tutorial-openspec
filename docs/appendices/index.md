@@ -17,6 +17,7 @@ Reference materials, glossary, and troubleshooting guides.
 | [Glossary]({% link appendices/glossary.md %}) | Zephyr terminology |
 | [References]({% link appendices/references.md %}) | External resources |
 | [Troubleshooting]({% link appendices/troubleshooting.md %}) | Common issues |
+| [Further Resources & Next Steps]({% link appendices/further-resources.md %}) | Continuing your Zephyr journey |
 
 ## Quick Links
 

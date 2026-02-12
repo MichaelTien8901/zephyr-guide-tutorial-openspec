@@ -2,7 +2,7 @@
 layout: default
 title: "GATT Server"
 parent: "Part 6: Advanced Topics"
-nav_order: 10
+nav_order: 17
 ---
 
 # GATT Server
@@ -292,4 +292,4 @@ See the complete [BLE Peripheral Example]({% link examples/part6/ble-peripheral/
 
 ## Next Steps
 
-Learn about [GATT Client]({% link part6/11-ble-gatt-client.md %}) for reading remote services.
+Learn about [GATT Client]({% link part6/18-ble-gatt-client.md %}) for reading remote services.

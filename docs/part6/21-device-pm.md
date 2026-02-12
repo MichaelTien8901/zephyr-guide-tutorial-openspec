@@ -2,7 +2,7 @@
 layout: default
 title: "Device PM"
 parent: "Part 6: Advanced Topics"
-nav_order: 14
+nav_order: 21
 ---
 
 # Device Power Management
@@ -280,4 +280,4 @@ int read_acceleration(int16_t *x, int16_t *y, int16_t *z)
 
 ## Next Steps
 
-Learn about [Debugging]({% link part6/15-debugging.md %}) for troubleshooting techniques.
+Learn about [Debugging]({% link part6/04-debugging.md %}) for troubleshooting techniques.

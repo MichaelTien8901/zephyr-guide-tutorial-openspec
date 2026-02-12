@@ -2,7 +2,7 @@
 layout: default
 title: "Overlays"
 parent: "Part 2: Build System"
-nav_order: 5
+nav_order: 6
 ---
 
 # Device Tree Overlays and Config Fragments
@@ -363,4 +363,4 @@ Check binding file for correct property type.
 
 ## Next Steps
 
-Learn about [Application Structure]({% link part2/06-application-structure.md %}) to organize your Zephyr projects.
+Learn about [Application Structure]({% link part2/08-application-structure.md %}) to organize your Zephyr projects.
