@@ -12,6 +12,8 @@ build/
 *.hex
 *.bin
 *.map
+docs/examples/build/
+docs/examples/docs/
 
 # IDE
 .vscode/
