@@ -12,7 +12,8 @@ examples/
 ├── part3/              # Kernel Essentials
 │   ├── threads/        # Thread creation and management
 │   ├── timers/         # k_timer usage
-│   └── workqueue/      # k_work patterns
+│   ├── workqueue/      # k_work patterns
+│   └── memory/         # k_malloc, k_heap, memory slabs
 ├── part4/              # Synchronization & IPC
 │   ├── mutex/          # Protected shared resource
 │   ├── semaphore/      # Producer-consumer pattern
@@ -23,6 +24,10 @@ examples/
 │   ├── i2c-sensor/     # I2C device communication
 │   └── uart/           # Serial communication
 ├── part6/              # Advanced Topics
+│   ├── logging/        # Logging subsystem demo
+│   ├── shell/          # Custom shell commands
+│   ├── tracing/        # CTF tracing demo
+│   ├── native-sim/     # Native simulator example
 │   ├── tcp-client/     # TCP socket client
 │   ├── mqtt/           # MQTT pub/sub
 │   └── ble-peripheral/ # BLE GATT server
@@ -90,6 +95,7 @@ west flash
 | threads | Multiple threads with different priorities | All |
 | timers | Periodic and one-shot timers | All |
 | workqueue | Deferred work from ISR | All |
+| memory | k_malloc, k_heap, and memory slabs | All |
 
 ### Part 4: Synchronization & IPC
 
@@ -112,6 +118,10 @@ west flash
 
 | Example | Description | Boards |
 |---------|-------------|--------|
+| logging | Log levels, hexdump, multi-module logging | All |
+| shell | Custom commands with subcommands | All |
+| tracing | Producer-consumer with CTF tracing | All |
+| native-sim | Application for native_sim target | native_sim only |
 | tcp-client | Simple HTTP GET request | Boards with networking |
 | mqtt | Publish sensor data to broker | Boards with networking |
 | ble-peripheral | Heart rate sensor service | BLE-capable boards |

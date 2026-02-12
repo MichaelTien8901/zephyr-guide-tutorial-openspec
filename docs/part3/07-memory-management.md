@@ -338,6 +338,15 @@ flowchart TD
 5. **Test with constrained memory** — simulate low-memory conditions to find allocation failures early
 6. **Avoid malloc in ISRs** — never call `k_malloc` from interrupt context; use `K_NO_WAIT` with slabs if needed
 
+## Example Code
+
+[View the complete memory management example](https://github.com/MichaelTien8901/zephyr-guide-tutorial/tree/main/examples/part3/memory) — demonstrates k_malloc, k_heap, and memory slabs.
+
+```bash
+west build -b qemu_cortex_m3 examples/part3/memory
+west build -t run
+```
+
 ## Next Steps
 
 Continue to [Part 4: Synchronization & IPC]({% link part4/index.md %}) to learn about inter-thread communication and synchronization.

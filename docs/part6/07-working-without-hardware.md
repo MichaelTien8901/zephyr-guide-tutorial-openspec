@@ -312,6 +312,15 @@ west twister -p native_sim --report-format junit
 | CI/CD pipeline | native_sim | Fastest build and execution |
 | Hardware timing validation | Real hardware | Emulators don't match timing |
 
+## Example Code
+
+[View the native_sim example](https://github.com/MichaelTien8901/zephyr-guide-tutorial/tree/main/examples/part6/native-sim) — runs entirely on your host machine with no hardware.
+
+```bash
+west build -b native_sim examples/part6/native-sim
+./build/zephyr/zephyr.exe
+```
+
 ## Next Steps
 
 Continue to [Networking Overview]({% link part6/08-networking-overview.md %}) to learn about Zephyr's networking stack.

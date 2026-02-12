@@ -239,6 +239,15 @@ Trace visualization shows:
 5. **Compare before/after** — capture traces before and after optimization
 6. **Use SystemView** for interactive debugging, **CTF** for automated analysis
 
+## Example Code
+
+[View the complete tracing example](https://github.com/MichaelTien8901/zephyr-guide-tutorial/tree/main/examples/part6/tracing) — producer-consumer application with CTF tracing enabled.
+
+```bash
+west build -b qemu_cortex_m3 examples/part6/tracing
+west build -t run
+```
+
 ## Next Steps
 
 Continue to [Debugging]({% link part6/04-debugging.md %}) for GDB debugging, fault analysis, and runtime diagnostics.

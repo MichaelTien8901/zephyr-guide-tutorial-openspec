@@ -373,6 +373,15 @@ int sensor_init(void)
 }
 ```
 
+## Example Code
+
+[View the complete logging example](https://github.com/MichaelTien8901/zephyr-guide-tutorial/tree/main/examples/part6/logging) — demonstrates log levels, hexdump, and multi-module logging.
+
+```bash
+west build -b qemu_cortex_m3 examples/part6/logging
+west build -t run
+```
+
 ## Next Steps
 
 Continue to [Shell]({% link part6/02-shell.md %}) to learn about the interactive shell subsystem.

@@ -324,6 +324,16 @@ SHELL_CMD_REGISTER(debug, &debug_cmds, "Debug commands", NULL);
 5. **Use shell output functions** — `shell_print` instead of `printk` for command output
 6. **Keep handlers fast** — don't block the shell thread with long operations
 
+## Example Code
+
+[View the complete shell example](https://github.com/MichaelTien8901/zephyr-guide-tutorial/tree/main/examples/part6/shell) — demonstrates custom shell commands with subcommands, arguments, and dynamic data.
+
+```bash
+west build -b qemu_cortex_m3 examples/part6/shell
+west build -t run
+# Type 'help' to see available commands
+```
+
 ## Next Steps
 
 Continue to [Tracing]({% link part6/03-tracing.md %}) to learn about the tracing subsystem for performance analysis.
