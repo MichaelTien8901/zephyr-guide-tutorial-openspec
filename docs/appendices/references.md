@@ -56,7 +56,7 @@ External resources for Zephyr development.
 
 - [Bluetooth Specification](https://www.bluetooth.com/specifications/specs/)
 - [IPMI Specification](https://www.intel.com/content/www/us/en/products/docs/servers/ipmi/ipmi-second-gen-interface-spec-v2-rev1-1.html)
-- [PLDM Specification](https://www.dmtf.org/standards/pldm)
+- [PLDM Specification](https://www.dmtf.org/standards/pmci)
 - [Device Tree Specification](https://devicetree.org/)
 
 ## Related Projects

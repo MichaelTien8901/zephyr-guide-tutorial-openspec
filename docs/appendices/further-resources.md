@@ -76,7 +76,7 @@ Through this guide, you've covered:
 
 | Vendor | SDK/Resource | Link |
 |:--|:--|:--|
-| Nordic Semiconductor | nRF Connect SDK | [developer.nordicsemi.com](https://developer.nordicsemi.com/) |
+| Nordic Semiconductor | nRF Connect SDK | [nordicsemi.com/nRF-Connect-SDK](https://www.nordicsemi.com/Products/Development-software/nRF-Connect-SDK) |
 | NXP | MCUXpresso SDK | [mcuxpresso.nxp.com](https://mcuxpresso.nxp.com/) |
 | STMicroelectronics | STM32Cube | [st.com/stm32cube](https://www.st.com/en/development-tools/stm32cubemx.html) |
 | Espressif | ESP-IDF + Zephyr | [docs.espressif.com](https://docs.espressif.com/) |
