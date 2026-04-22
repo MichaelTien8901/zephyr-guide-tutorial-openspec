@@ -13,15 +13,9 @@ logo: "/assets/zephyr_logo.png"
 theme: just-the-docs
 color_scheme: dark
 
-# Mermaid diagrams - use neutral theme with black lines
+# Mermaid diagrams
 mermaid:
   version: "10.6.0"
-  config:
-    theme: neutral
-    themeVariables:
-      actorLineColor: "#000000"
-      signalColor: "#000000"
-      lineColor: "#000000"
 
 # Search
 search_enabled: true
