@@ -1,0 +1,42 @@
+{
+  startOnLoad: false,
+  securityLevel: 'loose',
+  theme: 'base',
+  themeVariables: {
+    background: '#d5d0c8',
+    mainBkg: '#c5c0b8',
+    primaryColor: '#c5c0b8',
+    primaryTextColor: '#2c3e50',
+    primaryBorderColor: '#8a8578',
+    secondaryColor: '#cac5bd',
+    secondaryTextColor: '#2c3e50',
+    secondaryBorderColor: '#8a8578',
+    tertiaryColor: '#ddd8c8',
+    tertiaryTextColor: '#2c3e50',
+    tertiaryBorderColor: '#a89878',
+    lineColor: '#4a5568',
+    textColor: '#2c3e50',
+    nodeBkg: '#c5c0b8',
+    nodeTextColor: '#2c3e50',
+    nodeBorder: '#8a8578',
+    clusterBkg: '#cac5bd',
+    clusterBorder: '#8a8578',
+    noteBkgColor: '#ddd8c8',
+    noteTextColor: '#2c3e50',
+    noteBorderColor: '#a89878',
+    actorBkg: '#c5c0b8',
+    actorBorder: '#8a8578',
+    actorTextColor: '#2c3e50',
+    actorLineColor: '#4a5568',
+    signalColor: '#4a5568',
+    signalTextColor: '#2c3e50',
+    labelTextColor: '#2c3e50',
+    edgeLabelBackground: '#d5d0c8'
+  },
+  flowchart: {
+    useMaxWidth: true,
+    htmlLabels: true,
+    curve: 'basis',
+    diagramPadding: 8
+  }
+}
