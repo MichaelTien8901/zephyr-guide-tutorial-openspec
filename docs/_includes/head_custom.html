@@ -154,26 +154,38 @@
   }
 </style>
 
-<!-- Fix sequence diagram lifelines after mermaid renders -->
+<!-- Force mermaid text colors as inline SVG attributes — survives OS/browser color auto-adjust -->
 <script>
 (function() {
-  function fixActorLines() {
+  function pinMermaidColors() {
+    var svgs = document.querySelectorAll('svg[id^="mermaid-"]');
+    for (var i = 0; i < svgs.length; i++) {
+      var svg = svgs[i];
+      var texts = svg.querySelectorAll('text, tspan');
+      for (var j = 0; j < texts.length; j++) {
+        texts[j].setAttribute('fill', '#1a1a1a');
+      }
+      var rects = svg.querySelectorAll('.node rect, .node circle, .node ellipse, .node polygon, .cluster rect, rect.actor, .actor-box');
+      for (var k = 0; k < rects.length; k++) {
+        rects[k].setAttribute('fill', '#ede8df');
+        rects[k].setAttribute('stroke', '#6b6558');
+      }
+    }
     var lines = document.querySelectorAll('line[id^="actor"]');
-    for (var i = 0; i < lines.length; i++) {
-      lines[i].setAttribute('stroke', '#000000');
-      lines[i].setAttribute('stroke-width', '0.5px');
+    for (var l = 0; l < lines.length; l++) {
+      lines[l].setAttribute('stroke', '#000000');
+      lines[l].setAttribute('stroke-width', '0.5px');
     }
   }
 
-  // Run after page fully loads
   if (document.readyState === 'complete') {
-    setTimeout(fixActorLines, 500);
-    setTimeout(fixActorLines, 1500);
+    setTimeout(pinMermaidColors, 500);
+    setTimeout(pinMermaidColors, 1500);
   } else {
     window.addEventListener('load', function() {
-      setTimeout(fixActorLines, 500);
-      setTimeout(fixActorLines, 1500);
-      setTimeout(fixActorLines, 3000);
+      setTimeout(pinMermaidColors, 500);
+      setTimeout(pinMermaidColors, 1500);
+      setTimeout(pinMermaidColors, 3000);
     });
   }
 })();
