@@ -35,7 +35,7 @@
   },
   flowchart: {
     useMaxWidth: true,
-    htmlLabels: true,
+    htmlLabels: false,
     curve: 'basis',
     diagramPadding: 8
   }
