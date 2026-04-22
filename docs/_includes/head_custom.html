@@ -1,8 +1,3 @@
-<!-- Declare page as dark-themed so Chrome's Auto Dark Mode for Web Contents
-     does not re-invert our content (which would turn dark mermaid text into
-     light pixels at the render layer, beyond CSS reach). -->
-<meta name="color-scheme" content="dark">
-
 <!-- Site logo - larger size with horizontal padding -->
 <style>
   .site-title {
@@ -56,40 +51,16 @@
 
 <!-- Mermaid diagrams with paper-like background -->
 <style>
-  /* Mermaid container - paper-like background.
-     color-scheme: only light tells the browser (including Chrome Force Dark
-     and GTK-integrated Chromium on Linux) that this subtree is intentionally
-     light-themed, suppressing auto color inversion. */
-  .mermaid,
-  pre.mermaid,
-  .language-mermaid,
-  code.language-mermaid,
-  svg[id^="mermaid-"] {
-    background-color: #f0ebe2 !important;
-    color-scheme: only light !important;
-    forced-color-adjust: none !important;
-  }
+  /* Mermaid container - paper-like background */
   .mermaid,
   pre.mermaid,
   .language-mermaid,
   code.language-mermaid {
+    background-color: #f0ebe2 !important;
     border-radius: 8px !important;
     padding: 16px !important;
     margin: 16px 0 !important;
     display: block !important;
-  }
-
-  /* Force fill on mermaid SVG text — beats auto-dark inversion. */
-  svg[id^="mermaid-"] text,
-  svg[id^="mermaid-"] tspan {
-    fill: #1a1a1a !important;
-  }
-  svg[id^="mermaid-"] .edgePath path,
-  svg[id^="mermaid-"] .flowchart-link,
-  svg[id^="mermaid-"] path.arrowMarkerPath,
-  svg[id^="mermaid-"] marker path {
-    stroke: #2a2a2a !important;
-    fill: #2a2a2a !important;
   }
 
   /* All text in Mermaid - dark gray */
@@ -183,48 +154,25 @@
   }
 </style>
 
-<!-- Force mermaid text colors as inline SVG attributes — survives OS/browser color auto-adjust -->
+<!-- Fix sequence diagram lifelines after mermaid renders -->
 <script>
 (function() {
-  function pinMermaidColors() {
-    var svgs = document.querySelectorAll('svg[id^="mermaid-"]');
-    for (var i = 0; i < svgs.length; i++) {
-      var svg = svgs[i];
-      svg.style.colorScheme = 'only light';
-      svg.style.forcedColorAdjust = 'none';
-      var texts = svg.querySelectorAll('text, tspan');
-      for (var j = 0; j < texts.length; j++) {
-        texts[j].setAttribute('fill', '#1a1a1a');
-        texts[j].style.fill = '#1a1a1a';
-      }
-      var rects = svg.querySelectorAll('.node rect, .node circle, .node ellipse, .node polygon, .cluster rect, rect.actor, .actor-box');
-      for (var k = 0; k < rects.length; k++) {
-        rects[k].setAttribute('fill', '#ede8df');
-        rects[k].setAttribute('stroke', '#6b6558');
-        rects[k].style.fill = '#ede8df';
-        rects[k].style.stroke = '#6b6558';
-      }
-      var paths = svg.querySelectorAll('.edgePath path, .flowchart-link, path.arrowMarkerPath, marker path');
-      for (var p = 0; p < paths.length; p++) {
-        paths[p].style.stroke = '#2a2a2a';
-        paths[p].style.fill = '#2a2a2a';
-      }
-    }
+  function fixActorLines() {
     var lines = document.querySelectorAll('line[id^="actor"]');
-    for (var l = 0; l < lines.length; l++) {
-      lines[l].setAttribute('stroke', '#000000');
-      lines[l].setAttribute('stroke-width', '0.5px');
+    for (var i = 0; i < lines.length; i++) {
+      lines[i].setAttribute('stroke', '#000000');
+      lines[i].setAttribute('stroke-width', '0.5px');
     }
   }
 
   if (document.readyState === 'complete') {
-    setTimeout(pinMermaidColors, 500);
-    setTimeout(pinMermaidColors, 1500);
+    setTimeout(fixActorLines, 500);
+    setTimeout(fixActorLines, 1500);
   } else {
     window.addEventListener('load', function() {
-      setTimeout(pinMermaidColors, 500);
-      setTimeout(pinMermaidColors, 1500);
-      setTimeout(pinMermaidColors, 3000);
+      setTimeout(fixActorLines, 500);
+      setTimeout(fixActorLines, 1500);
+      setTimeout(fixActorLines, 3000);
     });
   }
 })();
